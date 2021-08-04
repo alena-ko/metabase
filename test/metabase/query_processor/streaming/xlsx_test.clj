@@ -201,7 +201,7 @@
       (doall (map-indexed
               (fn [i row] (i/write-row! results-writer row i ordered-cols viz-settings))
               rows))
-      (i/finish! results-writer {}))
+      (i/finish! results-writer {:row_count (count rows)}))
     (let [bytea (.toByteArray bos)]
       (with-open [is (BufferedInputStream. (ByteArrayInputStream. bytea))]
         (parse-xlsx-result is)))))
