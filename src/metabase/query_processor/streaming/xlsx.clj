@@ -14,7 +14,7 @@
            [java.time LocalDate LocalDateTime LocalTime OffsetDateTime OffsetTime ZonedDateTime]
            [org.apache.poi.ss.usermodel Cell CellType DataFormat DateUtil Workbook]
            org.apache.poi.ss.util.CellRangeAddress
-           [org.apache.poi.xssf.streaming SXSSFSheet SXSSFRow SXSSFWorkbook]))
+           [org.apache.poi.xssf.streaming SXSSFRow SXSSFSheet SXSSFWorkbook]))
 
 ;;; +----------------------------------------------------------------------------------------------------------------+
 ;;; |                                         Format string generation                                               |
