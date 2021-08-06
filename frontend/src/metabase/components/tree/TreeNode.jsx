@@ -25,7 +25,7 @@ const propTypes = {
     hasRightArrow: PropTypes.string,
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   }).isRequired,
-  variant: PropTypes.string,
+  colorScheme: PropTypes.string,
 };
 
 // eslint-disable-next-line react/display-name
@@ -39,7 +39,7 @@ export const TreeNode = React.memo(
       onSelect,
       depth,
       item,
-      variant,
+      colorScheme,
     },
     ref,
   ) {
@@ -69,7 +69,7 @@ export const TreeNode = React.memo(
         innerRef={ref}
         role="menuitem"
         tabIndex={0}
-        variant={variant}
+        colorScheme={colorScheme}
         depth={depth}
         onClick={handleSelect}
         isSelected={isSelected}
@@ -80,7 +80,7 @@ export const TreeNode = React.memo(
         </ExpandToggleButton>
 
         {icon && (
-          <IconContainer variant={variant}>
+          <IconContainer colorScheme={colorScheme}>
             <Icon name={icon} color={iconColor} />
           </IconContainer>
         )}
